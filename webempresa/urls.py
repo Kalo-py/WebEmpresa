@@ -17,18 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views
-"""
-Inicio home/
-Historia about/
-Servicios services/
-Visitanos store/
-Contacto contact/
-Blog blog/
-Sample sample/
-"""
+
 urlpatterns = [
     #Paths del core
-    
+    path("home/", views.home, name="home"),
+    path("home/", views.home, name="about"),
+    path("home/", views.home, name="services"),
+    path("home/", views.home, name="store"),
+    path("home/", views.home, name="contact"),
+    path("home/", views.home, name="blog"),
+    path("home/", views.home, name="sample"),
+
     #Paths del admin
     path("admin/", admin.site.urls),
 ]
