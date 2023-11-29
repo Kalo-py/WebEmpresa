@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os.path
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -72,20 +72,26 @@ WSGI_APPLICATION = "webempresa.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+"""
 DATABASES = {
-    "default": {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR,'dbl.sqlite3'),
+    }
+
+}
+"""
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'empresarial',
+        'NAME': 'jango',
         'USER': 'postgres',
         'PASSWORD': '02101996',
-        'HOST': 'localhost',
-        'PORT': '5432',
-        'OPTIONS': {
-            # 'options': '-c search_path=prueba'
-        },
+        'HOST': 'localhost',  # o la dirección de tu base de datos
+        'PORT': '5432',  # o el puerto de tu base de datos
     }
 }
+
 
 
 # Password validation

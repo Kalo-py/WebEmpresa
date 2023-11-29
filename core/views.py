@@ -12,22 +12,22 @@ Sample sample/
 """
 
 def home(request):
-    return httpResponse("Inicio")
+    return HttpResponse("Inicio")
 
 def about(request):
-    return httpResponse("Historia")
+    return HttpResponse("Historia")
 
 def services(request):
-    return httpResponse("Servicios")
+    return HttpResponse("Servicios")
 
 def store(request):
-    return httpResponse("Visitanos")
+    return HttpResponse("Visitanos")
 
 def contact(request):
-    return httpResponse("Contacto")
+    return HttpResponse("Contacto")
 
 def blog(request):
-    return httpResponse("Blog")
+    return HttpResponse("Blog")
 
 def sample(request):
-    return httpResponse("Sample")
+    return HttpResponse("Sample")
