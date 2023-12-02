@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "core",
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'jango',
+        'NAME': 'empresarial',
         'USER': 'postgres',
         'PASSWORD': '02101996',
         'HOST': 'localhost',  # o la dirección de tu base de datos
