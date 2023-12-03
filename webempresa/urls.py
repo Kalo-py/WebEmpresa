@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
 
 
 urlpatterns = [
@@ -25,3 +26,10 @@ urlpatterns = [
     # Paths del admin
     path("admin/", admin.site.urls),
 ]
+
+#permite corroborar si el debug esta en marcha
+#esto permite crear una url para los archivos en /media/ en setting
+#y se alojaran en el directorio de carpetas media que esta definido
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
