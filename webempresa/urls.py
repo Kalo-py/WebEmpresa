@@ -23,6 +23,9 @@ urlpatterns = [
     #Paths del core
     #el include permite traer el contenido del archivo urls.py que esta en urls dentro de la carpeta core
     path('', include('core.urls')),
+
+    #Paths del services
+    path('services/', include('services.urls')),
     # Paths del admin
     path("admin/", admin.site.urls),
 ]
