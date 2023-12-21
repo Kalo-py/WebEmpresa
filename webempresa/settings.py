@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "blog",
     "core",
     "services.apps.ServicesConfig",
+    "social.apps.SocialConfig",
 ]
 
 MIDDLEWARE = [
@@ -65,6 +66,9 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "social.processors.ctx_dict",
+                #está relacionada con la configuración de plantillas (templates) en un proyecto Django.
+                 #  Las plantillas en Django son archivos que contienen HTML con marcadores especiales para insertar datos dinámicos desde el código de Python.
             ],
         },
     },
