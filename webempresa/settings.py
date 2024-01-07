@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "blog",
+    "ckeditor",
     "core",
+    "pages.apps.PagesConfig",
     "services.apps.ServicesConfig",
     "social.apps.SocialConfig",
 ]
@@ -146,3 +148,15 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 #Media config
 MEDIA_URL="/media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+#ckeditor
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink']
+        ]
+    }
+}
