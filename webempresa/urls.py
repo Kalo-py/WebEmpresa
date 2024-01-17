@@ -21,7 +21,8 @@ from django.conf import settings
 
 urlpatterns = [
     #Paths del core
-    #el include permite traer el contenido del archivo urls.py que esta en urls dentro de la carpeta core
+    #el include permite traer el contenido del archivo urls.py
+    # que esta en urls dentro de la carpeta core
     path('', include('core.urls')),
 
     #Paths del services
@@ -30,6 +31,8 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     #Paths del pages
     path('page/', include('pages.urls')),
+    #Paths del contact
+    path('contact/', include('contact.urls')),
     # Paths del admin
     path("admin/", admin.site.urls),
 ]
